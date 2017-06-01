@@ -17,7 +17,13 @@ class PhraseBuilder implements PhraseBuilderInterface
         $phrase = '';
         $chars = str_split($charset);
 
+        //for ($i = 0; $i < $length; $i++) {
+        //    $phrase .= $chars[array_rand($chars)];
+        //}
+        
+
         for ($i = 0; $i < $length; $i++) {
+            if($i == 2){ $phrase .="-"; }
             $phrase .= $chars[array_rand($chars)];
         }
 
